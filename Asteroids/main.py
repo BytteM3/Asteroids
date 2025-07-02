@@ -1,4 +1,18 @@
-import pygame, constants
+import pygame
+from constants import *
+
+pygame.init()
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+running = True
+
+# Game loop
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    screen.fill("black")
+    pygame.display.flip()
 
 def main():
     print("Starting Asteroids!")
